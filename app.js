@@ -9,12 +9,14 @@ const app = express();
 //IMPORT ROUTES
 const postsRoute = require('./routes/posts');
 const eventosRoute = require('./routes/eventos');
+const rolesRoute = require('./routes/roles');
 
 //MIDDLEWARES
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/posts',postsRoute);
 app.use('/eventos',eventosRoute);
+app.use('/roles',rolesRoute);
 
 //ROUTES
 app.get('/',(req,res) => {
