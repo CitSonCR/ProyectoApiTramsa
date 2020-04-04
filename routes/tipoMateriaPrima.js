@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const Evento = require('../modules/Evento');
+const Evento = require('../modules/TipoMateriaPrima');
 
-//get all the eventos
+//get all the tipo materia prima
 router.get('/', async (req,res) => {
     try {
-        const eventos = await Evento.find();
-        res.json(eventos);
+        const tmp = await TipoMateriaPrima.find();
+        res.json(tmp);
     } catch (err) {
         res.json({message : err});
     }
