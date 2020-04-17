@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const EventoSchema = mongoose.Schema({
-    codigoEvento : {
+const TipoMateriaPrimaSchema = mongoose.Schema({
+    codigoTMP : {
         type: String,
         required : true
     },
@@ -11,4 +11,4 @@ const EventoSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Eventos',EventoSchema)
+module.exports = mongoose.model('TipoMateriaPrima',TipoMateriaPrimaSchema)
