@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-/* const EventoSchema = mongoose.Schema({
+ const EventoSchema = mongoose.Schema({
     codigoEvento : {
         type: String,
         required : true
@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
         type: String,
         required : true
     }
-}); */
+}); 
 
 const ParametroGeneralSchema = mongoose.Schema({
     codigoEvento : {
@@ -377,17 +377,6 @@ const FacturaSchema = mongoose.Schema({
     }
 });
 
-const EventoSchema = mongoose.Schema({
-    codigoEvento : {
-        type: String,
-        required : true
-    },
-    descripcion : {
-        type: String,
-        required : true
-    }
-});
-
 const RolSchema = mongoose.Schema({
     codigoRol : {
         type: String,
@@ -507,35 +496,25 @@ const BitacoraErrorSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Eventos',ParametroGeneralSchema)
-module.exports = mongoose.model('Consecutivos',ConsecutivoSchema)
-module.exports = mongoose.model('Bodegas',BodegaSchema)
-module.exports = mongoose.model('Camiones',CamionSchema)
-module.exports = mongoose.model('TipoMateriaPrima',TipoMateriaPrimaSchema)
-module.exports = mongoose.model('Eventos',MateriaPrimaSchema)
-module.exports = mongoose.model('Eventos',ProductoMaestroSchema)
-module.exports = mongoose.model('Eventos',ProductoDetalleSchema)
-module.exports = mongoose.model('Eventos',ProovedorSchema)
-module.exports = mongoose.model('Eventos',ClienteSchema)
-module.exports = mongoose.model('Eventos',ProcesoMaestroSchema)
-module.exports = mongoose.model('Eventos',ProcesoMaestroSchema)
-module.exports = mongoose.model('Eventos',ProcesoDetalleSchema)
-module.exports = mongoose.model('Eventos',ProduccionLoteSchema)
-module.exports = mongoose.model('Eventos',FacturaSchema)
 module.exports = mongoose.model('Eventos',EventoSchema)
-module.exports = mongoose.model('Eventos',RolSchema)
-module.exports = mongoose.model('Eventos',UsuarioSchema)
-module.exports = mongoose.model('Eventos',BitacoraSchema)
-module.exports = mongoose.model('Eventos',PedidoPendienteSchema)
-module.exports = mongoose.model('Eventos',BitacoraErrorSchema)
-
-
-
-
-
-
-
-
-
-
-
+// module.exports = mongoose.model('Eventos',ParametroGeneralSchema)
+// module.exports = mongoose.model('Consecutivos',ConsecutivoSchema)
+// module.exports = mongoose.model('Bodegas',BodegaSchema)
+// module.exports = mongoose.model('Camiones',CamionSchema)
+module.exports = mongoose.model('TipoMateriaPrima',TipoMateriaPrimaSchema)
+// module.exports = mongoose.model('Eventos',MateriaPrimaSchema)
+// module.exports = mongoose.model('Eventos',ProductoMaestroSchema)
+// module.exports = mongoose.model('Eventos',ProductoDetalleSchema)
+// module.exports = mongoose.model('Eventos',ProovedorSchema)
+// module.exports = mongoose.model('Eventos',ClienteSchema)
+// module.exports = mongoose.model('Eventos',ProcesoMaestroSchema)
+// module.exports = mongoose.model('Eventos',ProcesoMaestroSchema)
+// module.exports = mongoose.model('Eventos',ProcesoDetalleSchema)
+// module.exports = mongoose.model('Eventos',ProduccionLoteSchema)
+// module.exports = mongoose.model('Eventos',FacturaSchema)
+// module.exports = mongoose.model('Eventos',EventoSchema)
+// module.exports = mongoose.model('Eventos',RolSchema)
+// module.exports = mongoose.model('Eventos',UsuarioSchema)
+// module.exports = mongoose.model('Eventos',BitacoraSchema)
+// module.exports = mongoose.model('Eventos',PedidoPendienteSchema)
+// module.exports = mongoose.model('Eventos',BitacoraErrorSchema)

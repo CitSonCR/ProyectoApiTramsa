@@ -10,6 +10,9 @@ const app = express();
 const postsRoute = require('./routes/posts');
 const eventosRoute = require('./routes/eventos');
 const rolesRoute = require('./routes/roles');
+const eventosRoute = require('./routes/eventos');
+const pedidosRoute = require('./routes/pedidos');
+const ventasRoute = require('./routes/ventas');
 
 //MIDDLEWARES
 app.use(bodyParser.json());
@@ -17,6 +20,9 @@ app.use(cors());
 app.use('/posts',postsRoute);
 app.use('/eventos',eventosRoute);
 app.use('/roles',rolesRoute);
+app.use('/pedidos',pedidosRoute);
+app.use('/ventas',ventasRoute);
+app.use('/tipoMateriaPrimas',tipoMateriaPrimasRoute);
 
 //ROUTES
 app.get('/',(req,res) => {

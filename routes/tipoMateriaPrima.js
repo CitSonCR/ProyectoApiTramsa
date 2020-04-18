@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Evento = require('../modules/TipoMateriaPrima');
+const TipoMateriaPrima = require('../modules/Evento');
 
 //get all the tipo materia prima
 router.get('/', async (req,res) => {
@@ -12,7 +12,7 @@ router.get('/', async (req,res) => {
     }
 });
 
-
+/*
 //submit a evento
 router.post('/', async (req,res) => {
     const evento = new Evento({
@@ -58,5 +58,5 @@ router.patch('/:eventoId', async (req,res) => {
         res.json({message : err});
     }
 });
-
+*/
 module.exports = router;
