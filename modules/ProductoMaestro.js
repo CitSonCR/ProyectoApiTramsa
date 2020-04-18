@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
 
-const RolSchema = mongoose.Schema({
-    codigoRol : {
+const ProductoMaestroSchema = mongoose.Schema({
+    codigoProductoM : {
         type: String,
         required : true
     },
-    nombreRol : {
+    descripcion : {
         type: String,
         required : true
     },
-    rolDisponible : {
-        type: String,
+    puntoReorden : {
+        type: Number,
         required : true
     },
-    rolAsignado : {
+    unidadMedida : {
         type: String,
         required : true
     }
 });
 
-module.exports = mongoose.model('Roles',RolSchema)
+module.exports = mongoose.model('ProductoMaestro',ProductoMaestroSchema)

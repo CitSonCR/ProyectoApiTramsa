@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
 
-const RolSchema = mongoose.Schema({
-    codigoRol : {
+const BitacoraErrorSchema = mongoose.Schema({
+    codigoError : {
         type: String,
         required : true
     },
-    nombreRol : {
+    numero : {
+        type: Number,
+        required : true
+    },
+    fechaHora : {
         type: String,
         required : true
     },
-    rolDisponible : {
-        type: String,
-        required : true
-    },
-    rolAsignado : {
+    descripcion : {
         type: String,
         required : true
     }
 });
 
-module.exports = mongoose.model('Roles',RolSchema)
+module.exports = mongoose.model('BitacoraError',BitacoraErrorSchema)

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const TipoMateriaPrima = require('../modules/Evento');
+const TipoMateriaPrima = require('../modules/TipoMateriaPrima');
 
 //get all the tipo materia prima
 router.get('/', async (req,res) => {
@@ -12,51 +12,46 @@ router.get('/', async (req,res) => {
     }
 });
 
-/*
 //submit a evento
 router.post('/', async (req,res) => {
-    const evento = new Evento({
-        codigoEvento: req.body.codigoEvento,
-        descripcion: req.body.descripcion
-    });
     try {
-        const savedEvento = await evento.save();
-        res.json(savedEvento);
+        const savedTipoMateriaPrima = await tipoMateriaPrima.save();
+        res.json(savedTipoMateriaPrima);
     } catch (err) {
         res.json({message : err});
     }
     
 });
 //getById
-router.get('/:eventoId', async (req,res) => {
+router.get('/:tipoMateriaPrimaId', async (req,res) => {
     try {
-        const eventos = await Evento.findById(req.params.eventoId)
-        res.json(eventos);
+        const tipoMateriaPrimas = await TipoMateriaPrima.findById(req.params.tipoMateriaPrimaId)
+        res.json(tipoMateriaPrimas);
     } catch (err) {
         res.json({message : err});
     }
 });
 //delete
-router.delete('/:eventoId', async (req,res) => {
+router.delete('/:tipoMateriaPrimaId', async (req,res) => {
     try {        
-        const removedEvento = await Evento.remove({_id : req.params.eventoId})        
-        res.json(removedEvento);
+        const removedTipoMateriaPrima = await TipoMateriaPrima.remove({_id : req.params.tipoMateriaPrimaId})        
+        res.json(removedTipoMateriaPrima);
     } catch (err) {
         res.json({message : err});
     }
 });
 //patch
-router.patch('/:eventoId', async (req,res) => {
+router.patch('/:tipoMateriaPrimaId', async (req,res) => {
     try {        
-        const updatedEvento = await Evento.updateOne(
-            { _id: req.params.eventoId},
+        const updatedTipoMateriaPrima = await TipoMateriaPrima.updateOne(
+            { _id: req.params.tipoMateriaPrimaId},
             { $set: { descripcion: req.body.descripcion} }
         );
-        res.json(updatedEvento);
+        res.json(updatedTipoMateriaPrima);
     } catch (err) {
         console.log(err);
         res.json({message : err});
     }
 });
-*/
+
 module.exports = router;
