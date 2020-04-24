@@ -18,11 +18,11 @@ router.post('/', async (req,res) => {
     const proovedor = new Proovedor({
         codigoProovedor: req.body.codigoProovedor,
         cedula: req.body.cedula,
-        nombreProovedor: req.body.nombreProovedor,
+        nombre: req.body.nombre,
         telefono: req.body.telefono,
         correo: req.body.correo,
         contacto: req.body.contacto,
-        telefonoContacto: req.body.telefonoContacto,
+        telContacto: req.body.telContacto,
         direccion: req.body.direccion
     });
     try {
@@ -58,11 +58,11 @@ router.patch('/:ProovedorId', async (req,res) => {
             { _id: req.params.ProovedorId},
             { $set: { codigoProovedor: req.body.codigoProovedor} },
             { $set: { cedula: req.body.cedula} },
-            { $set: { nombreProovedor: req.body.nombreProovedor} },
+            { $set: { nombre: req.body.nombre} },
             { $set: { telefono: req.body.telefono} },
             { $set: { correo: req.body.correo} },
             { $set: { contacto: req.body.contacto} },
-            { $set: { telefonoContacto: req.body.telefonoContacto} },
+            { $set: { telContacto: req.body.telContacto} },
             { $set: { direccion: req.body.direccion} }
         );
         res.json(updatedProovedor);

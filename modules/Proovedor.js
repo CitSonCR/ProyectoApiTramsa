@@ -9,7 +9,7 @@ const ProovedorSchema = mongoose.Schema({
         type: String,
         required : true
     },
-    nombreProovedor : {
+    nombre : {
         type: String,
         required : true
     },
@@ -25,7 +25,7 @@ const ProovedorSchema = mongoose.Schema({
         type: String,
         required : true
     },
-    telefonoContacto : {
+    telContacto : {
         type: Number,
         required : true
     },
