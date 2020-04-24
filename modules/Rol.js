@@ -5,17 +5,19 @@ const RolSchema = mongoose.Schema({
         type: String,
         required : true
     },
-    nombreRol : {
+    nombre : {
         type: String,
         required : true
     },
     rolDisponible : {
         type: String,
-        required : true
+        required : true,
+        default : 'Y'
     },
     rolAsignado : {
         type: String,
-        required : true
+        required : true,
+        default : 'Y'
     }
 });
 

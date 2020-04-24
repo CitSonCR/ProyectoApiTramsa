@@ -10,7 +10,6 @@ const app = express();
 const postsRoute = require('./routes/posts');
 const eventosRoute = require('./routes/eventos');
 const rolesRoute = require('./routes/roles');
-const eventosRoute = require('./routes/eventos');
 const pedidosRoute = require('./routes/pedidos');
 const ventasRoute = require('./routes/ventas');
 const bodegasRoute = require('./routes/bodegas');
@@ -40,7 +39,7 @@ app.use('/eventos',eventosRoute);
 app.use('/roles',rolesRoute);
 app.use('/pedidos',pedidosRoute);
 app.use('/ventas',ventasRoute);
-app.use('/tipoMateriaPrimas',tipoMateriaPrimasRoute);
+//app.use('/tipoMateriaPrimas',tipoMateriaPrimasRoute);
 app.use('/bodegas',bodegasRoute);
 app.use('/consecutivos',consecutivosRoute);
 app.use('/camiones',camionesRoute);
@@ -67,7 +66,7 @@ app.get('/',(req,res) => {
 
 //CONNECT DB
 mongoose.connect(process.env.DB_CONNECTION,
-    { useNewUrlParser: true }, 
+    { useNewUrlParser: true,useUnifiedTopology: true }, 
     () => console.log('Connected! ' + mongoose.connection.readyState)
 );
 

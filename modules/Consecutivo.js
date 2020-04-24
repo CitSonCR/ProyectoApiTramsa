@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const ConsecutivoSchema = mongoose.Schema({
-    codigoConsecutivo : {
-        type: String,
-        required : true
-    },
     tipoConsecutivo : {
         type: String,
         required : true
@@ -19,7 +15,8 @@ const ConsecutivoSchema = mongoose.Schema({
     },
     prefijo : {
         type: String,
-        required : true
+        required : true,
+        default:'Y'
     }
 });
 
