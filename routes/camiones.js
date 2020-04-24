@@ -54,7 +54,7 @@ router.patch('/:camionId', async (req,res) => {
     try {        
         const updatedCamion = await Camion.updateOne(
             { _id: req.params.camionId},
-            { $set: { codigoCamion: req.body.codigoCamion,descripcion:req.body.descripcio,nombreCorto: req.body.nombreCorto,marca: req.body.marca, year: req.body.year,placa: req.body.placa } }
+            { $set: { codigoCamion: req.body.codigoCamion, descripcion:req.body.descripcio, nombreCorto: req.body.nombreCorto, marca: req.body.marca, year: req.body.year, placa: req.body.placa } }
         );
         res.json(updatedCamion);
     } catch (err) {

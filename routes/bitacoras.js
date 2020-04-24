@@ -53,11 +53,7 @@ router.patch('/:BitacoraId', async (req,res) => {
     try {        
         const updatedBitacora = await Bitacora.updateOne(
             { _id: req.params.BitacoraId},
-            { $set: { codigoBitacora: req.body.codigoBitacora} },
-            { $set: { user: req.body.user} },
-            { $set: { fechaHora: req.body.fechaHora} },
-            { $set: { codigoRegistro: req.body.codigoRegistro} },
-            { $set: { descripcion: req.body.descripcion} }
+            { $set: { codigoBitacora: req.body.codigoBitacora, user: req.body.user, fechaHora: req.body.fechaHora, codigoRegistro: req.body.codigoRegistro, descripcion: req.body.descripcion} }
         );
         res.json(updatedBitacora);
     } catch (err) {

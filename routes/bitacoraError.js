@@ -52,10 +52,7 @@ router.patch('/:BitacoraErrorId', async (req,res) => {
     try {        
         const updatedBitacoraError = await BitacoraError.updateOne(
             { _id: req.params.BitacoraErrorId},
-            { $set: { codigoError: req.body.codigoError} },
-            { $set: { numero: req.body.numero} },
-            { $set: { fechaHora: req.body.fechaHora} },
-            { $set: { descripcion: req.body.descripcion} }
+            { $set: { codigoError: req.body.codigoError, numero: req.body.numero, fechaHora: req.body.fechaHora, descripcion: req.body.descripcion} }
         );
         res.json(updatedBitacoraError);
     } catch (err) {

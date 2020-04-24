@@ -56,14 +56,7 @@ router.patch('/:bodegaId', async (req,res) => {
     try {        
         const updatedBodega = await Bodega.updateOne(
             { _id: req.params.bodegaId},
-            { $set: { codigoBodega: req.body.codigoBodega} },
-            { $set: { nombre: req.body.nombre} },
-            { $set: { nombreCorto: req.body.nombreCorto} },
-            { $set: { alias: req.body.alias} },
-            { $set: { ubicacion: req.body.ubicacion} },
-            { $set: { unidadMedida: req.body.unidadMedida} },
-            { $set: { tipoBodega: req.body.tipoBodega} },
-            { $set: { espacioBodega: req.body.espacioBodega} }
+            { $set: { codigoBodega: req.body.codigoBodega, nombre: req.body.nombre, nombreCorto: req.body.nombreCorto, alias: req.body.alias, ubicacion: req.body.ubicacion, unidadMedida: req.body.unidadMedida, tipoBodega: req.body.tipoBodega, espacioBodega: req.body.espacioBodega} }
         );
         res.json(updatedBodega);
     } catch (err) {
