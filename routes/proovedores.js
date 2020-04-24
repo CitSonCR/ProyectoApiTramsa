@@ -54,16 +54,18 @@ router.delete('/:ProovedorId', async (req, res) => {
 //patch
 router.patch('/:ProovedorId', async (req, res) => {
     try {
+    
         const updatedProovedor = await Proovedor.updateOne(
             { _id: req.params.ProovedorId },
             {
                 $set: {
                     codigoProovedor: req.body.codigoProovedor,
-                    nombreProovedor: req.body.nombreProovedor,
+                    nombre: req.body.nombre,
+                    cedula : req.body.cedula,
                     telefono: req.body.telefono,
                     correo: req.body.correo,
                     contacto: req.body.contacto,
-                    telefonoContacto: req.body.telefonoContacto,
+                    telContacto: req.body.telContacto,
                     direccion: req.body.direccion
                 }
             }

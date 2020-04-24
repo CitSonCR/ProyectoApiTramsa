@@ -27,7 +27,8 @@ const ClienteSchema = mongoose.Schema({
     },
     estado : {
         type: String,
-        required : true
+        required : true,
+        default:'Y'
     },
     telefono : {
         type: Number,
