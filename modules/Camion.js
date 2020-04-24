@@ -13,11 +13,11 @@ const CamionSchema = mongoose.Schema({
         type: String,
         required : true
     },
-    marco : {
+    marca : {
         type: String,
         required : true
     },
-    anio : {
+    year : {
         type: Number,
         required : true
     },
