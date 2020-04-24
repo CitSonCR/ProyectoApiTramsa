@@ -65,7 +65,7 @@ router.patch('/:consecutivoId', async (req,res) => {
             { $set: {   tipoConsecutivo: req.body.tipoConsecutivo,
                         descripcion: req.body.descripcion,
                         valorConsecutivo: req.body.valorConsecutivo,
-                        prefijo: req.body.prefijo} },
+                        prefijo: req.body.prefijo} }
         );
         res.json(updatedConsecutivo);
     } catch (err) {
