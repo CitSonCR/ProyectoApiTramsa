@@ -19,8 +19,8 @@ router.post('/', async (req,res) => {
         codigoCamion: req.body.codigoCamion,
         descripcion: req.body.descripcion,
         nombreCorto: req.body.nombreCorto,
-        marco: req.body.marco,
-        anio: req.body.anio,
+        marca: req.body.marca,
+        year: req.body.year,
         placa: req.body.placa
     });
     try {
@@ -54,12 +54,7 @@ router.patch('/:camionId', async (req,res) => {
     try {        
         const updatedCamion = await Camion.updateOne(
             { _id: req.params.camionId},
-            { $set: { codigoCamion: req.body.codigoCamion} },
-            { $set: { descripcion: req.body.descripcion} },
-            { $set: { nombreCorto: req.body.nombreCorto} },
-            { $set: { marco: req.body.marco} },
-            { $set: { anio: req.body.anio} },
-            { $set: { placa: req.body.placa} }
+            { $set: { codigoCamion: req.body.codigoCamion,descripcion:req.body.descripcio,nombreCorto: req.body.nombreCorto,marca: req.body.marca, year: req.body.year,placa: req.body.placa } }
         );
         res.json(updatedCamion);
     } catch (err) {
