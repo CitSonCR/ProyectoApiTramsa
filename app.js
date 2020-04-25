@@ -29,11 +29,8 @@ const usuariosRoute = require('./routes/usuarios');
 const bitacorasRoute = require('./routes/bitacoras');
 const pedidoPendienteRoute = require('./routes/pedidoPendiente');
 const bitacoraErrorRoute = require('./routes/bitacoraError');
-<<<<<<< HEAD
 const cajasRoute = require('./routes/cajas');
-=======
 const parametroGeneralRoute = require('./routes/parametroGeneral');
->>>>>>> be7281b08a418e103b78d579ed1ab5bd62c80739
 
 
 //MIDDLEWARES
@@ -62,11 +59,8 @@ app.use('/usuarios',usuariosRoute);
 app.use('/bitacoras',bitacorasRoute);
 app.use('/pedidoPendiente',pedidoPendienteRoute);
 app.use('/bitacoraError',bitacoraErrorRoute);
-<<<<<<< HEAD
 app.use('/cajas', cajasRoute);
-=======
 app.use('/parametroGeneral',parametroGeneralRoute);
->>>>>>> be7281b08a418e103b78d579ed1ab5bd62c80739
 
 
 //ROUTES
