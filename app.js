@@ -29,6 +29,7 @@ const usuariosRoute = require('./routes/usuarios');
 const bitacorasRoute = require('./routes/bitacoras');
 const pedidoPendienteRoute = require('./routes/pedidoPendiente');
 const bitacoraErrorRoute = require('./routes/bitacoraError');
+const cajasRoute = require('./routes/cajas');
 
 
 //MIDDLEWARES
@@ -57,6 +58,7 @@ app.use('/usuarios',usuariosRoute);
 app.use('/bitacoras',bitacorasRoute);
 app.use('/pedidoPendiente',pedidoPendienteRoute);
 app.use('/bitacoraError',bitacoraErrorRoute);
+app.use('/cajas', cajasRoute);
 
 
 //ROUTES

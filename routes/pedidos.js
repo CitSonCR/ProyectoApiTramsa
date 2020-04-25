@@ -17,12 +17,13 @@ router.post('/', async (req,res) => {
     const pedidos = new Pedido({
 
         codigoPedido : req.body.codigoPedido,
-        proveedorId : req.body.proveedorId,
         fecha : req.body.fecha,
-        estado : req.body.estado,
+        proveedorId : req.body.proveedorId,
         codigoMateriaPrima : req.body.codigoMateriaPrima,
         nombreMateriaPrima : req.body.nombreMateriaPrima,
-        cantidadMateriaPrima : req.body.cantidadMateriaPrima
+        cantidadMateriaPrima : req.body.cantidadMateriaPrima,
+        estado : req.body.estado
+        
 
     });
     try {

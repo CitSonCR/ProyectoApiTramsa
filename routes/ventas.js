@@ -15,19 +15,16 @@ router.get('/', async (req,res) => {
 //submit a post
 router.post('/', async (req,res) => {
     const ventas = new Venta({
-
         numeroFactura : req.body.numeroFactura,
         clienteId : req.body.clienteId,
         fecha : req.body.fecha,
-        productos : {
-            productoId : req.body.productoId,
-            cantidad : req.body.cantidad,
-        },
+        productos : req.body.productos,
         descuento : req.body.descuento,
         impuesto : req.body.impuesto,
         total : req.body.total
 
     });
+    console.log(ventas)
     try {
         const savedVenta = await ventas.save();
         res.json(savedVenta);

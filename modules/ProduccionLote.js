@@ -13,7 +13,7 @@ const ProduccionLoteSchema = mongoose.Schema({
         type: String,
         required : true
     },
-    Producto : {
+    producto : {
         type: String,
         required : true
     },

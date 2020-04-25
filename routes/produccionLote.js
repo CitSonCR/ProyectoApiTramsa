@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         numeroProduccion: req.body.numeroProduccion,
         fechaProduccion: req.body.fechaProduccion,
         codigoProduccion: req.body.codigoProduccion,
-        Producto: req.body.Producto,
+        producto: req.body.producto,
         bodega: req.body.bodega,
         cantidadProducir: req.body.cantidadProducir,
         tiempo: req.body.tiempo

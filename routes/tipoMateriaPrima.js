@@ -14,8 +14,13 @@ router.get('/', async (req,res) => {
 
 //submit a evento
 router.post('/', async (req,res) => {
+    const tmp = new TipoMateriaPrima({
+
+        codigoTMP : req.body.codigoTMP,
+        descripcion : req.body.descripcion
+    });
     try {
-        const savedTipoMateriaPrima = await tipoMateriaPrima.save();
+        const savedTipoMateriaPrima = await tmp.save();
         res.json(savedTipoMateriaPrima);
     } catch (err) {
         res.json({message : err});
