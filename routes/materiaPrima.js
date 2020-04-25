@@ -17,11 +17,9 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const materiaPrima = new MateriaPrima({
         codigoMateriaPrima: req.body.codigoMateriaPrima,
-        descripcion: req.body.descripcion,
-        nombreCorto: req.body.nombreCorto,
-        marco: req.body.marco,
-        anio: req.body.anio,
-        placa: req.body.placa
+        nombre: req.body.nombre,
+        cantidad: req.body.cantidad,
+        unidad: req.body.unidad
     });
     try {
         const savedMateriaPrima = await materiaPrima.save();
@@ -57,11 +55,9 @@ router.patch('/:materiaPrimaId', async (req, res) => {
             {
                 $set: {
                     codigoMateriaPrima: req.body.codigoMateriaPrima,
-                    descripcion: req.body.descripcion,
-                    nombreCorto: req.body.nombreCorto,
-                    marco: req.body.marco,
-                    anio: req.body.anio,
-                    placa: req.body.placa
+                    nombre: req.body.nombre,
+                    cantidad: req.body.cantidad,
+                    unidad: req.body.unidad
                 }
             }
         );
