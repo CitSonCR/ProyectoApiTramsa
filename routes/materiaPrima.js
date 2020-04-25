@@ -16,12 +16,12 @@ router.get('/', async (req, res) => {
 //submit a evento
 router.post('/', async (req, res) => {
     const materiaPrima = new MateriaPrima({
-        codigoMateriaPrima: req.body.codigoMateriaPrima,
+        codigoMP: req.body.codigoMP,
         nombre: req.body.nombre,
-        cantidad: req.body.cantidad,
-        unidad: req.body.unidad
+        cantidadExistente: req.body.cantidadExistente,
+        unidadMedida: req.body.unidadMedida
     });
-    try {
+    try {        
         const savedMateriaPrima = await materiaPrima.save();
         res.json(savedMateriaPrima);
     } catch (err) {
@@ -54,10 +54,10 @@ router.patch('/:materiaPrimaId', async (req, res) => {
             { _id: req.params.materiaPrimaId },
             {
                 $set: {
-                    codigoMateriaPrima: req.body.codigoMateriaPrima,
+                    codigoMP: req.body.codigoMateriaPrima,
                     nombre: req.body.nombre,
-                    cantidad: req.body.cantidad,
-                    unidad: req.body.unidad
+                    cantidadExistente: req.body.cantidad,
+                    unidadMedida: req.body.unidad
                 }
             }
         );
